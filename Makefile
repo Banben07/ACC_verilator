@@ -28,7 +28,7 @@ sim: generate compile
 	$(SIM) $(SIM_FLAGS) -l sim.log
 
 verilator:	
-	@verilator $(if $(cflags),-CFLAGS $(cflags)) --cc --trace --exe --build --timing csrc/*  tb/icb_slave_tb.sv rtl/* bn/*  --top-module icb_slave_tb --Wno-fatal -Wno-WIDTH -Wno-UNOPTFLAT -Wno-CASEINCOMPLETE -Wno-LITENDIAN
+	@verilator $(if $(cflags),-CFLAGS $(cflags)) --cc --trace --exe --build -j --timing csrc/*  tb/icb_slave_tb.sv rtl/* bn/*  --top-module icb_slave_tb --Wno-fatal -Wno-WIDTH -Wno-UNOPTFLAT -Wno-CASEINCOMPLETE -Wno-LITENDIAN
 	@cd obj_dir/ && ./Vicb_slave_tb
 
 xrun: generate
