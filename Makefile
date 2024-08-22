@@ -65,6 +65,6 @@ find:
 
 # 清理目标、uvm环境中已有
 clean:
-	rm -rf *~ core csrc simv* vc_hdrs.h ucli.key urg* *.log cover *.fsdb *.vpd DVEfiles transcript .ida* .indago* *.db indago* *.d xrun* novas.*
+	rm -rf *~ core obj_dir simv* vc_hdrs.h ucli.key urg* *.log cover *.fsdb *.vpd DVEfiles transcript .ida* .indago* *.db indago* *.d xrun* novas.*
 
 .PHONY: all sim compile dve verdi clean find
